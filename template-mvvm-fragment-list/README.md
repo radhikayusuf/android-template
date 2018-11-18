@@ -8,7 +8,7 @@ Template page untuk pattern MVVM Kotlin list.
 
 ## How To Use
 
-- New > Other > MVVM Page
+- New > Other > MVVM Fragment List
 - Follows Todo
 
 ## Author
