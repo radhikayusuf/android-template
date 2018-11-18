@@ -1,6 +1,6 @@
-# MVVM Kotlin Page List [Template]
+# MVVM Kotlin Fragment List [Template]
 
-Template page untuk pattern MVVM Kotlin. 
+Template page untuk pattern MVVM Kotlin list. 
 
 ## Installing
 
@@ -9,7 +9,7 @@ Template page untuk pattern MVVM Kotlin.
 ## How To Use
 
 - New > Other > MVVM Page
-- Follow todo
+- Follows Todo
 
 ## Author
 
