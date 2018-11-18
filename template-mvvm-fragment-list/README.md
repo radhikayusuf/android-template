@@ -1,4 +1,4 @@
-# MVVM Kotlin Page [Template]
+# MVVM Kotlin Page List [Template]
 
 Template page untuk pattern MVVM Kotlin. 
 
@@ -9,6 +9,7 @@ Template page untuk pattern MVVM Kotlin.
 ## How To Use
 
 - New > Other > MVVM Page
+- Follow todo
 
 ## Author
 
