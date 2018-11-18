@@ -9,7 +9,6 @@ do
   cp -frv $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/MVP* "$folder/Contents/plugins/android/lib/templates/activities/"
 done
 
-
 echo "Done."
 echo ""
 echo "Restart IntelliJ and/or AndroidStudio"

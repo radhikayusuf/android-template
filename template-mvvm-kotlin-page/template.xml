@@ -1,0 +1,49 @@
+<template 
+	format="4"
+        revision="2"
+        name="MVVM-PAGE"
+        description="Generate 6 File : Activity (class and layout), Fragment (class and layout), ViewModel, UserActionListener">
+ 
+    <category value="Other"/>
+ 
+    <parameter 
+	    id="className"
+        name="Page Name"    
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Main"
+        help="The name of the functionality that requires MVVM views"/>
+
+    <parameter
+        id="layoutName"
+        name="Activity Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(className)}"
+        default="activity_main"
+        help="The name of the layout to create for the activity"/>
+
+
+    <parameter
+        id="fragmentLayoutName"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(className, 'fragment')}"
+        default="fragment_main"
+        help="The name of the layout to create for the fragment"/>
+
+
+    <parameter
+        id="isLauncher"
+        name="Launcher Activity"
+        type="boolean"
+        default="false"
+        help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
+
+        
+ 
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+ 
+</template>

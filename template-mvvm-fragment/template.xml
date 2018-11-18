@@ -1,0 +1,32 @@
+<template 
+	format="4"
+        revision="1"
+        name="MVVM-Fragment"
+        description="Generate 5 File : Fragment (class and layout), ViewModel, UserActionListener, Navigator">
+ 
+    <category value="Other"/>
+ 
+    <parameter 
+	id="className"
+        name="Page Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Main"
+        help="The name of the functionality that requires MVVM views"/>
+
+
+    <parameter
+        id="fragmentLayoutName"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(className, 'fragment')}"
+        default="fragment_main"
+        help="The name of the layout to create for the fragment"/>
+
+        
+ 
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+ 
+</template>

@@ -1,0 +1,39 @@
+<template 
+	format="4"
+        revision="1"
+        name="MVVM-Fragment-LIST"
+        description="MVVM-Fragment-LIST Generate 8 File : Fragment (class, itemlayout and layout), ViewModel, UserActionListener, Model, Adapter">
+ 
+    <category value="Other"/>
+ 
+    <parameter 
+	    id="className"
+        name="Page Name"    
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Main"
+        help="The name of the functionality that requires MVVM views"/>
+
+    <parameter
+        id="fragmentLayoutName"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(className, 'fragment')}"
+        default="fragment_main"
+        help="The name of the layout to create for the fragment"/>
+
+    <parameter
+        id="itemLayoutName"
+        name="RecyclerView Item Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(className, 'item')}"
+        default="activity_main"
+        help="The name of the layout to create for the activity item"/>
+        
+ 
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+ 
+</template>

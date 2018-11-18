@@ -1,0 +1,59 @@
+<template 
+	format="4"
+        revision="1"
+        name="MVVM-LIST"
+        description="MVVM-LIST Generate 9 File : Activity (class, layout and itemlayout), Fragment (class and layout), ViewModel, UserActionListener, Model, Adapter">
+ 
+    <category value="Other"/>
+ 
+    <parameter 
+	    id="className"
+        name="Page Name"    
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Main"
+        help="The name of the functionality that requires MVVM views"/>
+
+    <parameter
+        id="layoutName"
+        name="Activity Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(className)}"
+        default="activity_main"
+        help="The name of the layout to create for the activity"/>
+
+
+    <parameter
+        id="itemLayoutName"
+        name="RecyclerView Item Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(className, 'item')}"
+        default="activity_main"
+        help="The name of the layout to create for the activity item"/>
+
+
+    <parameter
+        id="fragmentLayoutName"
+        name="Fragment Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(className, 'fragment')}"
+        default="fragment_main"
+        help="The name of the layout to create for the fragment"/>
+
+
+    <parameter
+        id="isLauncher"
+        name="Launcher Activity"
+        type="boolean"
+        default="false"
+        help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
+
+        
+ 
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+ 
+</template>
