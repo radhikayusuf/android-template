@@ -10,6 +10,6 @@
 
 
 
+
 # Try This!
-[![Android Template + MVVM Framework](http://img.youtube.com/vi/nVj3dP-1ZnY/0.jpg)](http://www.youtube.com/watch?v=nVj3dP-1ZnY)
-https://www.youtube.com/watch?v=YXzx530pTOA
+[![Android Template + MVVM Framework](http://img.youtube.com/vi/YXzx530pTOA/0.jpg)](https://www.youtube.com/watch?v=YXzx530pTOA)
